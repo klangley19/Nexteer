@@ -1,0 +1,23 @@
+﻿@model Nexteer.Models.Product
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditProduct</title>
+</head>
+<body>
+    <div>
+        <p>Enter the details for the product you would like to edit, and click the save button for the product changes to be saved into the database</p>
+        @using (Html.BeginForm())
+        {
+            {Html.RenderPartial("_ProductFormControls");}
+        }
+    </div>
+</body>
+</html>

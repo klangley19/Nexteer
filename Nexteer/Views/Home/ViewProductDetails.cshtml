@@ -1,0 +1,111 @@
+﻿@model Nexteer.Models.Product
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewProductDetails</title>
+</head>
+<body>
+    <div>
+
+        <p>Product ID :: @Model.ProductID</p>
+
+        @if (Model.Name != null)
+        {
+            <p>Name :: @Model.Name</p>
+        }
+
+        @if (Model.ProductNumber != null)
+        {
+            <p>Product Number :: @Model.ProductNumber</p>
+        }
+
+        <p>Make Flag :: @Model.MakeFlag</p>
+        <p>Finished Goods Flag :: @Model.FinishedGoodsFlag</p>
+
+        @if (Model.Color != null)
+        {
+            <p>Color :: @Model.Color</p>
+        }
+
+        <p>Safety Stock Level :: @Model.SafetyStockLevel</p>
+        <p>Reorder Point :: @Model.ReorderPoint</p>
+        <p>Standard Cost :: @Model.StandardCost</p>
+        <p>List Price :: @Model.ListPrice</p>
+
+        @if (Model.Size != null)
+        {
+            <p>Size :: @Model.Size</p>
+        }
+
+        @if (Model.SizeUnitMeasureCode != null)
+        {
+            <p>Size Unit Measure Code :: @Model.SizeUnitMeasureCode</p>
+        }
+
+        @if (Model.Weight != null)
+        {
+            <p>Weight :: @Model.Weight</p>
+        }
+
+        @if (Model.WeightUnitMeasureCode != null)
+        {
+            <p>Weight Unit Measure Code :: @Model.WeightUnitMeasureCode</p>
+        }
+        
+        <p>Days To Manufacture :: @Model.DaysToManufacture</p>
+
+        @if (Model.ProductLine != null)
+        {
+            <p>Product Line :: @Model.ProductLine</p>
+        }
+
+        @if (Model.Class != null)
+        {
+            <p>Class :: @Model.Class</p>
+        }
+
+        @if (Model.Style != null)
+        {
+            <p>Style :: @Model.Style</p>
+        }
+
+        @if (Model.ProductSubcategory != null && Model.ProductSubcategory.ProductCategory != null && Model.ProductSubcategory.ProductCategory.Name != null)
+        {
+            <p>Product Category :: @Model.ProductSubcategory.ProductCategory.Name</p>
+        }
+
+        @if (Model.ProductSubcategory != null)
+        {
+            <p>Product Subcategory :: @Model.ProductSubcategory.Name</p>
+        }
+        
+        @if (Model.SellStartDate != null)
+        {
+            <p>Sell Start Date :: @Model.SellStartDate</p>
+        }
+        
+        @if (Model.SellEndDate != null)
+        {
+            <p>Sell End Date :: @Model.SellEndDate</p>
+        }
+        
+        @if (Model.DiscontinuedDate != null)
+        {
+            <p>Discontinued Date :: @Model.DiscontinuedDate</p>
+        }
+    </div>
+    <div>
+        <input type="button" value="Edit Product" onclick="location.href='@Url.Action("EditProduct", "Home", new { productID = @Model.ProductID })'" />
+        <br />
+        <br />
+        <input type="button" value="Delete Product" onclick="location.href='@Url.Action("DeleteProduct", "Home", new { productID = @Model.ProductID })'" />
+    </div>
+
+</body>
+</html>

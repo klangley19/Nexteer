@@ -1,0 +1,23 @@
+﻿@model Dictionary<int, string>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewProducts</title>
+</head>
+<body>
+    <div> 
+        <p>Here are some really great products!!!</p>
+            @foreach (KeyValuePair<int, string> product in Model)
+            {
+                <a href="@Url.Action("ViewProductDetails", "Home", new { productID = @product.Key })">@product.Value</a> <br />       
+            }
+        </ul>
+    </div>
+</body>
+</html>

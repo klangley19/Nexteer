@@ -1,0 +1,139 @@
+﻿@model Nexteer.Models.Product
+
+<div>
+    @Html.LabelFor(p => p.Name)
+    @Html.TextBoxFor(p => p.Name)
+    @Html.ValidationMessageFor(p => p.Name)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.ProductNumber)
+    @Html.TextBoxFor(p => p.ProductNumber)
+    @Html.ValidationMessageFor(p => p.ProductNumber)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.MakeFlag)
+    @Html.EditorFor(p => p.MakeFlag)
+    @Html.ValidationMessageFor(p => p.MakeFlag)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.FinishedGoodsFlag)
+    @Html.EditorFor(p => p.FinishedGoodsFlag)
+    @Html.ValidationMessageFor(p => p.FinishedGoodsFlag)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.Color)
+    @Html.TextBoxFor(p => p.Color)
+    @Html.ValidationMessageFor(p => p.Color)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.SafetyStockLevel)
+    @Html.TextBoxFor(p => p.SafetyStockLevel)
+    @Html.ValidationMessageFor(p => p.SafetyStockLevel)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.ReorderPoint)
+    @Html.TextBoxFor(p => p.ReorderPoint)
+    @Html.ValidationMessageFor(p => p.ReorderPoint)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.StandardCost)
+    @Html.TextBoxFor(p => p.StandardCost)
+    @Html.ValidationMessageFor(p => p.StandardCost)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.ListPrice)
+    @Html.TextBoxFor(p => p.ListPrice)
+    @Html.ValidationMessageFor(p => p.ListPrice)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.Size)
+    @Html.TextBoxFor(p => p.Size)
+    @Html.ValidationMessageFor(p => p.Size)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.SizeUnitMeasureCode)
+    @Html.TextBoxFor(p => p.SizeUnitMeasureCode)
+    @Html.ValidationMessageFor(p => p.SizeUnitMeasureCode)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.WeightUnitMeasureCode)
+    @Html.TextBoxFor(p => p.WeightUnitMeasureCode)
+    @Html.ValidationMessageFor(p => p.WeightUnitMeasureCode)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.Weight)
+    @Html.TextBoxFor(p => p.Weight)
+    @Html.ValidationMessageFor(p => p.Weight)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.DaysToManufacture)
+    @Html.TextBoxFor(p => p.DaysToManufacture)
+    @Html.ValidationMessageFor(p => p.DaysToManufacture)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.ProductLine)
+    @Html.TextBoxFor(p => p.ProductLine)
+    @Html.ValidationMessageFor(p => p.ProductLine)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.Class)
+    @Html.TextBoxFor(p => p.Class)
+    @Html.ValidationMessageFor(p => p.Class)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.Style)
+    @Html.TextBoxFor(p => p.Style)
+    @Html.ValidationMessageFor(p => p.Style)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.ProductSubcategoryID, "Product Subcategory")
+    @Html.DropDownListFor(p => p.ProductSubcategoryID, (IEnumerable<SelectListItem>)ViewBag.ProductSubcategoriesSelectList)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.ProductModelID)
+    @Html.TextBoxFor(p => p.ProductModelID)
+    @Html.ValidationMessageFor(p => p.ProductModelID)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.SellStartDate)
+    @Html.TextBoxFor(p => p.SellStartDate)
+    @Html.ValidationMessageFor(p => p.SellStartDate)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.SellEndDate)
+    @Html.TextBoxFor(p => p.SellEndDate)
+    @Html.ValidationMessageFor(p => p.SellEndDate)
+</div>
+<br />
+<div>
+    @Html.LabelFor(p => p.DiscontinuedDate)
+    @Html.TextBoxFor(p => p.DiscontinuedDate)
+    @Html.ValidationMessageFor(p => p.DiscontinuedDate)
+</div>
+<br />
+<br />
+<div>
+    <button type="submit" value="Submit">Submit</button>
+    <button type="reset" value="Reset">Reset</button>
+</div>
+
