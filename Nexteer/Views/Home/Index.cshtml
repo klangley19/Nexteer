@@ -1,21 +1,15 @@
 ﻿
+
+
 @{
-    Layout = null;
+    ViewBag.Title = "Nexteer :: Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-        <input type="button" value="Add Product" onclick="location.href='@Url.Action("AddProduct", "Home")'" />
-        <br />
-        <br />
-        <input type="button" value="View Products" onclick="location.href='@Url.Action("ViewProducts", "Home")'" />
+<div class="container">
+    <div class="panel">
+        <div class="panel-body text-center w-50">
+            @{Html.RenderPartial("_NavigationButtons");}
+        </div>
     </div>
-</body>
-</html>
+</div>

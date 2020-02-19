@@ -1,19 +1,20 @@
 ﻿
+
 @{
-    Layout = null;
+    ViewBag.Title = "Nexteer :: Product Added Failed";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>ProductAddedFailed</title>
-</head>
-<body>
-    <div> 
-        <p>The product was not added to the database!!! Please stay calm and try again later when things may be better.</p>
-        @{Html.RenderPartial("_NavigationButtons");}
+<br />
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <div>
+                <p style="font-weight: bold;" class="text-center">The product was not added to the database!!! Please stay calm and try again later when things may be better.</p>
+                @{Html.RenderPartial("_NavigationButtons");}
+            </div>
         </div>
-</body>
-</html>
+    </div>
+</div>
+

@@ -1,23 +1,25 @@
 ﻿@model Dictionary<int, string>
+
 @{
-    Layout = null;
+    ViewBag.Title = "Nexteer :: View All Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>ViewProducts</title>
-</head>
-<body>
-    <div> 
-        <p>Here are some really great products!!!</p>
+<br />
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading text-center"><h4>View Products</h4></div>
+        <div class="panel-body">
+            <p style="font-weight: bold;" class="text-center">Here are some really great products!!!</p>
+            <br />
             @foreach (KeyValuePair<int, string> product in Model)
             {
-                <a href="@Url.Action("ViewProductDetails", "Home", new { productID = @product.Key })">@product.Value</a> <br />       
+                <a href="@Url.Action("ViewProductDetails", "Home", new { productID = @product.Key })">@product.Value</a> <br />
             }
-        </ul>
+        </div>
     </div>
-</body>
-</html>
+</div>
+
+
+

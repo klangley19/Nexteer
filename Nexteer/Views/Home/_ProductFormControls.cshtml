@@ -1,139 +1,143 @@
 ﻿@model Nexteer.Models.Product
 
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.Name)
-    @Html.TextBoxFor(p => p.Name)
+    @Html.TextBoxFor(p => p.Name, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.Name)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.ProductNumber)
-    @Html.TextBoxFor(p => p.ProductNumber)
+    @Html.TextBoxFor(p => p.ProductNumber, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.ProductNumber)
 </div>
 <br />
-<div>
-    @Html.LabelFor(p => p.MakeFlag)
-    @Html.EditorFor(p => p.MakeFlag)
+<div class="form-group text-left">
+    @Html.LabelFor(p => p.MakeFlag) &nbsp;
+    @Html.EditorFor(p => p.MakeFlag, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.MakeFlag)
 </div>
 <br />
-<div>
-    @Html.LabelFor(p => p.FinishedGoodsFlag)
-    @Html.EditorFor(p => p.FinishedGoodsFlag)
+<div class="form-group text-left">
+    @Html.LabelFor(p => p.FinishedGoodsFlag) &nbsp;
+    @Html.EditorFor(p => p.FinishedGoodsFlag, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.FinishedGoodsFlag)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.Color)
-    @Html.TextBoxFor(p => p.Color)
+    @Html.TextBoxFor(p => p.Color, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.Color)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.SafetyStockLevel)
-    @Html.TextBoxFor(p => p.SafetyStockLevel)
+    @Html.TextBoxFor(p => p.SafetyStockLevel, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.SafetyStockLevel)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.ReorderPoint)
-    @Html.TextBoxFor(p => p.ReorderPoint)
+    @Html.TextBoxFor(p => p.ReorderPoint, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.ReorderPoint)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.StandardCost)
-    @Html.TextBoxFor(p => p.StandardCost)
+    @Html.TextBoxFor(p => p.StandardCost, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.StandardCost)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.ListPrice)
-    @Html.TextBoxFor(p => p.ListPrice)
+    @Html.TextBoxFor(p => p.ListPrice, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.ListPrice)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.Size)
-    @Html.TextBoxFor(p => p.Size)
+    @Html.TextBoxFor(p => p.Size, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.Size)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.SizeUnitMeasureCode)
-    @Html.TextBoxFor(p => p.SizeUnitMeasureCode)
+    @Html.TextBoxFor(p => p.SizeUnitMeasureCode, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.SizeUnitMeasureCode)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.WeightUnitMeasureCode)
-    @Html.TextBoxFor(p => p.WeightUnitMeasureCode)
+    @Html.TextBoxFor(p => p.WeightUnitMeasureCode, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.WeightUnitMeasureCode)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.Weight)
-    @Html.TextBoxFor(p => p.Weight)
+    @Html.TextBoxFor(p => p.Weight, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.Weight)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.DaysToManufacture)
-    @Html.TextBoxFor(p => p.DaysToManufacture)
+    @Html.TextBoxFor(p => p.DaysToManufacture, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.DaysToManufacture)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.ProductLine)
-    @Html.TextBoxFor(p => p.ProductLine)
+    @Html.TextBoxFor(p => p.ProductLine, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.ProductLine)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.Class)
-    @Html.TextBoxFor(p => p.Class)
+    @Html.TextBoxFor(p => p.Class, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.Class)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.Style)
-    @Html.TextBoxFor(p => p.Style)
+    @Html.TextBoxFor(p => p.Style, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.Style)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.ProductSubcategoryID, "Product Subcategory")
-    @Html.DropDownListFor(p => p.ProductSubcategoryID, (IEnumerable<SelectListItem>)ViewBag.ProductSubcategoriesSelectList)
+    @Html.DropDownListFor(p => p.ProductSubcategoryID, (IEnumerable<SelectListItem>)ViewBag.ProductSubcategoriesSelectList, new { @class = "form-control" })
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.ProductModelID)
-    @Html.TextBoxFor(p => p.ProductModelID)
+    @Html.TextBoxFor(p => p.ProductModelID, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.ProductModelID)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.SellStartDate)
-    @Html.TextBoxFor(p => p.SellStartDate)
+    @Html.TextBoxFor(p => p.SellStartDate, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.SellStartDate)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.SellEndDate)
-    @Html.TextBoxFor(p => p.SellEndDate)
+    @Html.TextBoxFor(p => p.SellEndDate, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.SellEndDate)
 </div>
 <br />
-<div>
+<div class="form-group text-left">
     @Html.LabelFor(p => p.DiscontinuedDate)
-    @Html.TextBoxFor(p => p.DiscontinuedDate)
+    @Html.TextBoxFor(p => p.DiscontinuedDate, new { @class = "form-control" })
     @Html.ValidationMessageFor(p => p.DiscontinuedDate)
 </div>
 <br />
 <br />
-<div>
-    <button type="submit" value="Submit">Submit</button>
-    <button type="reset" value="Reset">Reset</button>
+<div class="form-group">
+    <button class="btn btn-primary btn-block" 
+            type="submit" 
+            value="Submit">Submit</button>
+    <button class="btn btn-primary btn-block"
+            type="reset" 
+            value="Reset">Reset</button>
 </div>
 

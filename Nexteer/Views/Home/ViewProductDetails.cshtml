@@ -1,111 +1,163 @@
 ﻿@model Nexteer.Models.Product
+
+
 @{
-    Layout = null;
+    ViewBag.Title = "Nexteer :: View Product Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>ViewProductDetails</title>
-</head>
-<body>
-    <div>
+<br />
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading text-center"><h4>View Product Details</h4></div>
+        <div class="panel-body">
+            <div>
+                @if (Model.Name != null)
+                {
+                    @Html.LabelFor(p => p.Name)
+                    @Html.TextBoxFor(p => p.Name, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
 
-        <p>Product ID :: @Model.ProductID</p>
+                @if (Model.ProductNumber != null)
+                {
+                    @Html.LabelFor(p => p.ProductNumber)
+                    @Html.TextBoxFor(p => p.ProductNumber, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
 
-        @if (Model.Name != null)
-        {
-            <p>Name :: @Model.Name</p>
-        }
+                @Html.LabelFor(p => p.MakeFlag)
+                @Html.TextBoxFor(p => p.MakeFlag, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                <br />
 
-        @if (Model.ProductNumber != null)
-        {
-            <p>Product Number :: @Model.ProductNumber</p>
-        }
+                @Html.LabelFor(p => p.FinishedGoodsFlag)
+                @Html.TextBoxFor(p => p.FinishedGoodsFlag, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                <br />
 
-        <p>Make Flag :: @Model.MakeFlag</p>
-        <p>Finished Goods Flag :: @Model.FinishedGoodsFlag</p>
+                @if (Model.Color != null)
+                {
+                    @Html.LabelFor(p => p.Color)
+                    @Html.TextBoxFor(p => p.Color, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
 
-        @if (Model.Color != null)
-        {
-            <p>Color :: @Model.Color</p>
-        }
+                @Html.LabelFor(p => p.SafetyStockLevel)
+                @Html.TextBoxFor(p => p.SafetyStockLevel, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                <br />
 
-        <p>Safety Stock Level :: @Model.SafetyStockLevel</p>
-        <p>Reorder Point :: @Model.ReorderPoint</p>
-        <p>Standard Cost :: @Model.StandardCost</p>
-        <p>List Price :: @Model.ListPrice</p>
+                @Html.LabelFor(p => p.ReorderPoint)
+                @Html.TextBoxFor(p => p.ReorderPoint, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                <br />
 
-        @if (Model.Size != null)
-        {
-            <p>Size :: @Model.Size</p>
-        }
+                @Html.LabelFor(p => p.StandardCost)
+                @Html.TextBoxFor(p => p.StandardCost, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                <br />
 
-        @if (Model.SizeUnitMeasureCode != null)
-        {
-            <p>Size Unit Measure Code :: @Model.SizeUnitMeasureCode</p>
-        }
+                @Html.LabelFor(p => p.ListPrice)
+                @Html.TextBoxFor(p => p.ListPrice, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                <br />
 
-        @if (Model.Weight != null)
-        {
-            <p>Weight :: @Model.Weight</p>
-        }
+                @if (Model.Size != null)
+                {
+                    @Html.LabelFor(p => p.Size)
+                    @Html.TextBoxFor(p => p.Size, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
 
-        @if (Model.WeightUnitMeasureCode != null)
-        {
-            <p>Weight Unit Measure Code :: @Model.WeightUnitMeasureCode</p>
-        }
-        
-        <p>Days To Manufacture :: @Model.DaysToManufacture</p>
+                @if (Model.SizeUnitMeasureCode != null)
+                {
+                    @Html.LabelFor(p => p.SizeUnitMeasureCode)
+                    @Html.TextBoxFor(p => p.SizeUnitMeasureCode, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
 
-        @if (Model.ProductLine != null)
-        {
-            <p>Product Line :: @Model.ProductLine</p>
-        }
+                @if (Model.Weight != null)
+                {
+                    @Html.LabelFor(p => p.Weight)
+                    @Html.TextBoxFor(p => p.Weight, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
 
-        @if (Model.Class != null)
-        {
-            <p>Class :: @Model.Class</p>
-        }
+                @if (Model.WeightUnitMeasureCode != null)
+                {
+                    @Html.LabelFor(p => p.WeightUnitMeasureCode)
+                    @Html.TextBoxFor(p => p.WeightUnitMeasureCode, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
 
-        @if (Model.Style != null)
-        {
-            <p>Style :: @Model.Style</p>
-        }
+                @Html.LabelFor(p => p.DaysToManufacture)
+                @Html.TextBoxFor(p => p.DaysToManufacture, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                <br />
+                
+                @if (Model.ProductLine != null)
+                {
+                    @Html.LabelFor(p => p.ProductLine)
+                    @Html.TextBoxFor(p => p.ProductLine, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
 
-        @if (Model.ProductSubcategory != null && Model.ProductSubcategory.ProductCategory != null && Model.ProductSubcategory.ProductCategory.Name != null)
-        {
-            <p>Product Category :: @Model.ProductSubcategory.ProductCategory.Name</p>
-        }
+                @if (Model.Class != null)
+                {
+                    @Html.LabelFor(p => p.Class)
+                    @Html.TextBoxFor(p => p.Class, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
 
-        @if (Model.ProductSubcategory != null)
-        {
-            <p>Product Subcategory :: @Model.ProductSubcategory.Name</p>
-        }
-        
-        @if (Model.SellStartDate != null)
-        {
-            <p>Sell Start Date :: @Model.SellStartDate</p>
-        }
-        
-        @if (Model.SellEndDate != null)
-        {
-            <p>Sell End Date :: @Model.SellEndDate</p>
-        }
-        
-        @if (Model.DiscontinuedDate != null)
-        {
-            <p>Discontinued Date :: @Model.DiscontinuedDate</p>
-        }
+                @if (Model.Style != null)
+                {
+                    @Html.LabelFor(p => p.Style)
+                    @Html.TextBoxFor(p => p.Style, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
+
+                @if (Model.ProductSubcategory != null && Model.ProductSubcategory.ProductCategory != null && Model.ProductSubcategory.ProductCategory.Name != null)
+                {
+                    @Html.Label("Product Category")
+                    @Html.TextBox("ProductCategory", @Model.ProductSubcategory.ProductCategory.Name, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
+
+                @if (Model.ProductSubcategory != null)
+                {
+                    @Html.Label("Product Subcategory")
+                    @Html.TextBox("ProductSubcategory", @Model.ProductSubcategory.Name, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
+
+                @if (Model.SellStartDate != null)
+                {
+                    @Html.LabelFor(p => p.SellStartDate)
+                    @Html.TextBoxFor(p => p.SellStartDate, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
+
+                @if (Model.SellEndDate != null)
+                {
+                    @Html.LabelFor(p => p.SellEndDate)
+                    @Html.TextBoxFor(p => p.SellEndDate, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
+
+                @if (Model.DiscontinuedDate != null)
+                {
+                    @Html.LabelFor(p => p.DiscontinuedDate)
+                    @Html.TextBoxFor(p => p.DiscontinuedDate, new { @class = "form-control", @readonly = "readonly", onfocus = "this.blur()" })
+                    <br />
+                }
+            </div>
+            <br />
+            <div>
+                <input class="btn btn-primary btn-block"
+                       type="button" 
+                       value="Edit Product" 
+                       onclick="location.href='@Url.Action("EditProduct", "Home", new { productID = @Model.ProductID })'" />
+                <br />
+                <input class="btn btn-primary btn-block"
+                       type="button" 
+                       value="Delete Product" 
+                       onclick="location.href='@Url.Action("DeleteProduct", "Home", new { productID = @Model.ProductID })'" />
+            </div>
+        </div>
     </div>
-    <div>
-        <input type="button" value="Edit Product" onclick="location.href='@Url.Action("EditProduct", "Home", new { productID = @Model.ProductID })'" />
-        <br />
-        <br />
-        <input type="button" value="Delete Product" onclick="location.href='@Url.Action("DeleteProduct", "Home", new { productID = @Model.ProductID })'" />
-    </div>
-
-</body>
-</html>
+</div>
